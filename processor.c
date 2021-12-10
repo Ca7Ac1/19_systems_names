@@ -17,9 +17,9 @@ int main()
 {
     mkfifo(PROCESS, 0644);
     mkfifo(OUTPUT, 0644);
-    
-    int writeOutput = open(OUTPUT, O_RDONLY);
-    int readProcess = open(PROCESS, O_WRONLY); 
+
+    int readProcess = open(PROCESS, O_RDONLY); 
+    int writeOutput = open(OUTPUT, O_WRONLY);
 
     char input[1000];
     int r = read(readProcess, input, sizeof(input));
