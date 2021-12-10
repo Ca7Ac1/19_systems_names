@@ -7,6 +7,3 @@ interface.o: interface.c constants.h
 processor.o: processor.c constants.h
 	gcc -c processor.c
 
-run: 
-	./main
-
